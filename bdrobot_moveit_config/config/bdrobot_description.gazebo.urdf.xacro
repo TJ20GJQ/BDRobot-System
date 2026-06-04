@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="bdrobot_description">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import robot_description urdf file -->
+    <xacro:include filename="$(find bdrobot_description)/urdf/robot_description.urdf" />
+
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <robot_param>robot_description</robot_param>
+            <robot_param_node>robot_state_publisher</robot_param_node>
+            <parameters>$(find bdrobot_moveit_config)/config/ros2_controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
+    
+    <!-- Import control_xacro -->
+    <xacro:include filename="bdrobot_description.gazebo.ros2_control.xacro" />
+
+
+    <xacro:bdrobot_description_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

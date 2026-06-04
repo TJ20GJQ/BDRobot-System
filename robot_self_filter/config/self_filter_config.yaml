@@ -1,0 +1,79 @@
+lidar_topic: "/mid360"
+lidar_filtered_topic: "/mid360_filtered"
+lidar_frame: "lidar_link"
+lidar_hz: 10.0
+viz_enabled: false
+openmp_core_num: 4
+
+pass_through_enabled: true
+x_min: -0.9
+x_max: 0.3
+y_min: 0.0  # 0.2
+y_max: 1.2
+z_min: -0.2
+z_max: 2.0
+
+capsule_filter_enabled: true
+link_properties:
+  arm_base_link:
+    radius: 0.1
+    length: 1.9  # 连杆长度
+    center_offset_x: 0.0
+    center_offset_y: 0.0
+    center_offset_z: 0.95
+    axis_x: 0.0       # 方向向量x分量
+    axis_y: 0.0       # 方向向量y分量
+    axis_z: 1.0       # 方向向量z分量
+    
+  arm1_link:
+    radius: 0.125
+    length: 1.85   # 连杆长度
+    center_offset_x: -0.03
+    center_offset_y: 0.0
+    center_offset_z: 0.9
+    axis_x: 0.0       # 方向向量x分量
+    axis_y: 0.0       # 方向向量y分量
+    axis_z: 1.0       # 方向向量z分量
+    
+  arm2_link:
+    radius: 0.08
+    length: 0.64   # 连杆长度
+    center_offset_x: 0.0
+    center_offset_y: 0.0
+    center_offset_z: 0.14
+    axis_x: 0.0       # 方向向量x分量
+    axis_y: 0.0       # 方向向量y分量
+    axis_z: 1.0       # 方向向量z分量
+    
+  arm3_link:
+    radius: 0.05
+    length: 0.6   # 连杆长度  0.44
+    center_offset_x: 0.03
+    center_offset_y: 0.0
+    center_offset_z: -0.03
+    axis_x: 0.0       # 方向向量x分量
+    axis_y: 0.0       # 方向向量y分量
+    axis_z: 1.0       # 方向向量z分量
+    
+  arm4_link:
+    radius: 0.09
+    length: 0.16   # 连杆长度
+    center_offset_x: 0.005
+    center_offset_y: 0.0
+    center_offset_z: 0.0
+    axis_x: 0.0       # 方向向量x分量
+    axis_y: 0.0       # 方向向量y分量
+    axis_z: 1.0       # 方向向量z分量
+
+  arm5_link:
+    radius: 0.13
+    length: 1   # 连杆长度 0.62
+    center_offset_x: 0.05
+    center_offset_y: 0.0
+    center_offset_z: 0.086
+    axis_x: 1.0       # 方向向量x分量
+    axis_y: 0.0       # 方向向量y分量
+    axis_z: 0.0       # 方向向量z分量
+
+expansion_factor: 3.0
+aabb_ratio_threshold: 0.6  # 体积比阈值：V_cap/V_aabb > 此值时用 AABB 替代胶囊检测

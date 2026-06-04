@@ -1,0 +1,8 @@
+# Default initial positions for bdrobot_description's ros2_control fake system
+
+initial_positions:
+  arm1_joint: -1
+  arm2_joint: -1
+  arm3_joint: 0.1
+  arm4_joint: 0
+  arm5_joint: 0
