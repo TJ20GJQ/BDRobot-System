@@ -1,0 +1,12 @@
+uint8[] id_10_motion_state
+uint8[] id_11_system_state_1
+uint8[] id_12_drive_motor
+uint8[] id_13_steer_motor
+uint8[] id_14_auto_charge
+uint8[] id_15_rc_rocker
+uint8[] id_16_rc_key
+uint8[] id_30_system_state_2
+uint8[] id_40_steer_current
+uint8[] id_41_drive_current
+uint8[] id_42_steer_error
+uint8[] id_43_drive_error

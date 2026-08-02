@@ -1,0 +1,9 @@
+uint8[13] cmd_90_soc_of_total_voltage_current
+uint8[13] cmd_91_maximum_minimum_voltage
+uint8[13] cmd_92_maximum_minimum_temperature
+uint8[13] cmd_93_charge_discharge_mos_status
+uint8[13] cmd_94_status_information
+uint8[13] cmd_95_cell_voltage
+uint8[13] cmd_96_cell_temperature
+uint8[13] cmd_97_cell_balance_state
+uint8[13] cmd_98_battery_failure_status
